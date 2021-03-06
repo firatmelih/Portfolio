@@ -81,7 +81,7 @@ body main #wellcome .text p:nth-child(2) {
   padding-right: 0;
 }
 
-body main #wellcome .social {
+body main #wellcome .buttons {
   text-align: center;
   padding-top: 5rem;
   padding-bottom: 5rem;

@@ -1,35 +1,20 @@
 'use strict';
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-
-
-//Typer Coded by github.com/firatmelih
-var [i, j, k] = [0, 0, 0];
-let txtArray = ['a Developer', 'Programmer', 'Student', 'Melih']
-var txt = txtArray[k];
-var speed = 200;
-var textToType = document.getElementById("typer");
-var cursor = document.getElementById("cursor");
-Typer();
-
+//Typer Coded by github.com/firatmelih && Decleration phase.
 async function Typer() {
     if (j == txt.length) {
-        await sleep(1000);
+        setTimeout(cursorBlink, speed);
+        await sleep(4000);
     }
     if (i < txt.length) {
-        // setTimeout(cursorBlink, speed / 2);
         textToType.innerHTML += txt.charAt(i);
         i++;
-        setTimeout(Typer, speed, cursor.hidden = false);
+        setTimeout(Typer, speed);
         j = i;
     }
     else if (j > 0) {
         textToType.innerHTML = textToType.innerHTML.slice(0, -1);
         j--;
-        setTimeout(Typer, (speed / 3), cursor.hidden = true);
+        setTimeout(Typer, (speed / 3));
     }
     if (textToType.innerHTML == '') {
         k++;
@@ -41,13 +26,24 @@ async function Typer() {
         }
     }
 }
-// to get a blinking cursor effect.
-function cursorBlink() {
-    if (i < txt.length) {
-        if (cursor.hidden) cursor.hidden = false;
-        else cursor.hidden = true;
+async function cursorBlink() {
+    for (let counter = 0; counter < 3; counter++) {
+        cursor.innerHTML += '|';
+        await sleep(500);
+        cursor.innerHTML = '';
+        await sleep(500);
     }
+    cursor.innerHTML = '';
+    counter = 0;
 }
-
-var link = window.location.href.split('.html')[0];
-window.history.replaceState(null, null, link);
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+// Calling and running functions
+var [i, j, k] = [0, 0, 0];
+let txtArray = ['a Developer', 'Programmer', 'Student', 'Melih']
+var txt = txtArray[k];
+var speed = 150;
+var textToType = document.getElementById("typer");
+var cursor = document.getElementById("cursor");
+Typer();
