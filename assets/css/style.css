@@ -25,11 +25,12 @@ body nav {
 }
 
 body nav.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #00979c;
   color: black;
-  position: fixed;
   width: 100%;
-  margin-bottom: 5rem;
 }
 
 body nav.scrolled .left,
@@ -74,6 +75,7 @@ body nav .right ul li a {
 }
 
 body main {
+  padding-top: 2rem;
   margin: 0 160px 0 160px;
   background-color: rgba(0, 0, 0, 0.781);
 }
@@ -81,6 +83,11 @@ body main {
 body main #wellcome {
   width: 100%;
   height: 1000px;
+  transition: 1s;
+}
+
+body main #wellcome.scrolled {
+  padding-top: 10rem;
   transition: 1s;
 }
 
@@ -120,6 +127,17 @@ body main #wellcome .buttons {
 
 body main #wellcome .buttons .social {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+body main #wellcome .buttons .social img {
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  width: 32px;
+  height: 32px;
 }
 
 body main #wellcome .buttons .scroll {

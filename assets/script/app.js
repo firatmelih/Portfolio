@@ -52,12 +52,13 @@ url = url.substring(0, url.lastIndexOf("#")); 3
 window.history.replaceState(null, null, url);
 
 window.addEventListener('scroll', () => {
-    console.log(window.scrollY);
     if (window.scrollY > 90) {
         document.querySelector('nav').classList.add('scrolled');
+        document.querySelector('#wellcome').classList.add('scrolled');
     }
     else {
         document.querySelector('nav').classList.remove('scrolled');
+        document.querySelector('#wellcome').classList.remove('scrolled');
     }
 })
 
