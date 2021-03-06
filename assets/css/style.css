@@ -2,8 +2,8 @@
 * {
   font-family: 'Ubuntu', sans-serif !important;
   padding: 0;
-  color: #fff;
   margin: 0;
+  color: white;
   scroll-behavior: smooth;
 }
 
@@ -11,16 +11,42 @@ body {
   background-image: url("/assets/img/background.png");
 }
 
+body header {
+  transition: 5s;
+  color: black !important;
+}
+
 body nav {
+  transition: 1s;
   background-color: black;
   justify-content: space-between;
   display: flex;
   align-items: center;
 }
 
+body nav.scrolled {
+  background-color: #00979c;
+  color: black;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+body nav.scrolled .left,
+body nav.scrolled .right {
+  color: black;
+}
+
+body nav.scrolled .left ul li a,
+body nav.scrolled .right ul li a {
+  color: black;
+  font-weight: 850;
+}
+
 body nav .left {
-  padding: 2rem;
+  padding-left: 2rem;
   font-size: 1.5rem;
+  color: aqua;
 }
 
 body nav .right ul {
@@ -34,11 +60,11 @@ body nav .right ul li {
 }
 
 body nav .right ul li:hover {
-  background-color: red;
+  background-color: #007777;
 }
 
 body nav .right ul li:last-child:hover {
-  background-color: gray;
+  background-color: #02ac79;
 }
 
 body nav .right ul li a {
@@ -55,9 +81,11 @@ body main {
 body main #wellcome {
   width: 100%;
   height: 1000px;
+  transition: 1s;
 }
 
 body main #wellcome h1 {
+  transition: 1s;
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
@@ -125,6 +153,7 @@ body main #wellcome .buttons .scroll:hover .wheel {
 }
 
 body main #about {
+  padding-top: 2rem;
   width: 100%;
   height: 100%;
   display: flex;
