@@ -76,6 +76,7 @@ body main #about .text-era {
 
 body main #about .text-era .left {
   padding-left: 5vw;
+  display: flex;
 }
 
 body main #about .text-era .left p {
@@ -84,18 +85,7 @@ body main #about .text-era .left p {
   justify-items: center;
   padding: 0.5vw 0 0.5vw 0;
   color: white;
-}
-
-body main #about .text-era .left p:nth-child(1) {
   font-size: 35px;
-}
-
-body main #about .text-era .left p:nth-child(2) {
-  font-size: 75px;
-}
-
-body main #about .text-era .left p:nth-child(3) {
-  font-size: 25px;
 }
 
 body main #about .text-era .right {
