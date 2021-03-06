@@ -1,7 +1,9 @@
-//Typer Coded by github.com/firatmelih
+'use strict';
 
+//Typer Coded by github.com/firatmelih
 var [i, j, k] = [0, 0, 0];
-var txt = 'Hello World!';
+let txtArray = ['Hello World!', 'I am Melih', 'Wellcome to my page.', 'check my github ;)']
+var txt = txtArray[k];
 var speed = 150;
 var textToType = document.getElementById("typer");
 var cursor = document.getElementById("cursor");
@@ -20,29 +22,17 @@ function Typer() {
         j--;
         setTimeout(Typer, (speed / 3), cursor.hidden = true);
     }
-    if (j == 0) {
+    if (textToType.innerHTML == '') {
         k++;
+        txt = txtArray[k];
         i = 0;
-        switch (k) {
-            case 1:
-                txt = 'I am Melih';
-                break;
-            case 2:
-                txt = 'I am a Programmer.';
-                break;
-            case 3:
-                txt = 'Wellcome to my page.';
-            case 4:
-                txt = 'Hello World!';
-                k = 0;
-                break
-            default:
+        if (k >= txtArray.length) {
+            k = 0;
+            txt = txtArray[k];
         }
     }
 }
-
 // to get a blinking cursor effect.
-
 function cursorBlink() {
     if (cursor.hidden) cursor.hidden = false;
     else cursor.hidden = true;
