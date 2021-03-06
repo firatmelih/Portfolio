@@ -7,6 +7,7 @@
   padding: 0;
   color: #fff;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,6 +59,7 @@ body {
       }
       .text {
         width: 33%;
+        height: 150px;
         display: flex;
         margin-right: 33%;
         margin-left: 33%;
@@ -71,12 +73,43 @@ body {
         }
       }
       .buttons {
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        .social {
+          padding: 2rem;
+        }
+        .scroll {
+          margin-left: 50%;
+          margin-right: 50%;
+          background-color: red;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          .mouse {
+            margin: 0;
+            padding: 0;
+            width: 45px;
+            height: 45px;
+          }
+          .wheel {
+            transition: 1s;
+            position: relative;
+            top: -10px;
+            left: -27px;
+            width: 10px;
+            height: 10px;
+          }
+          &:hover {
+            .wheel {
+              top: 10px;
+            }
+          }
+        }
       }
     }
-
     #about {
       // transition: 1s;
       width: 100%;

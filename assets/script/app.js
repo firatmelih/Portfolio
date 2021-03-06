@@ -34,7 +34,6 @@ async function cursorBlink() {
         await sleep(500);
     }
     cursor.innerHTML = '';
-    counter = 0;
 }
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -47,3 +46,4 @@ var speed = 150;
 var textToType = document.getElementById("typer");
 var cursor = document.getElementById("cursor");
 Typer();
+
