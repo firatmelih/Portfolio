@@ -11,9 +11,64 @@ body {
   background-image: url("/assets/img/background.png");
 }
 
+body .side-nav {
+  height: 53.3333333333px;
+  width: 53.3333333333px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  color: pink;
+  background-color: none;
+  position: fixed;
+  left: 53.3333333333px;
+  top: 53.3333333333px;
+  z-index: 1;
+}
+
+body .side-nav .side-nav-img {
+  transition: 0.5s;
+  -webkit-transform: rotate(180deg);
+}
+
+body .side-nav .close {
+  transition: 0.5s;
+  -webkit-transform: rotate(0deg);
+}
+
+body .side-nav img {
+  height: 35px;
+}
+
 body header {
-  transition: 5s;
   color: black !important;
+}
+
+body header.scrolled {
+  padding-top: 5rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: black;
+  height: 100%;
+  width: 160px;
+  text-align: start;
+}
+
+body header.scrolled nav {
+  display: block;
+}
+
+body header.scrolled nav .left,
+body header.scrolled nav .right {
+  padding-top: 2rem;
+  display: block;
+}
+
+body header.scrolled nav .left ul,
+body header.scrolled nav .right ul {
+  text-align: center;
+  display: block;
 }
 
 body nav {
@@ -22,26 +77,7 @@ body nav {
   justify-content: space-between;
   display: flex;
   align-items: center;
-}
-
-body nav.scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #00979c;
-  color: black;
-  width: 100%;
-}
-
-body nav.scrolled .left,
-body nav.scrolled .right {
-  color: black;
-}
-
-body nav.scrolled .left ul li a,
-body nav.scrolled .right ul li a {
-  color: black;
-  font-weight: 850;
+  transition: width 5s;
 }
 
 body nav .left {
@@ -87,8 +123,7 @@ body main #wellcome {
 }
 
 body main #wellcome.scrolled {
-  padding-top: 10rem;
-  transition: 1s;
+  margin-top: 5rem;
 }
 
 body main #wellcome h1 {

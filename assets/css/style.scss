@@ -12,9 +12,55 @@
 
 body {
   background-image: url('/assets/img/background.png');
+  .side-nav {
+    height: 53.3333333333px;
+    width: 53.3333333333px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    color: pink;
+    background-color: none;
+    position: fixed;
+    left: 53.3333333333px;
+    top: 53.3333333333px;
+    z-index: 1;
+    .side-nav-img {
+      transition: 0.5s;
+      -webkit-transform: rotate(180deg);
+    }
+    .close {
+      transition: 0.5s;
+      -webkit-transform: rotate(0deg);
+    }
+    img {
+      height: 35px;
+    }
+  }
   header {
-    transition: 5s;
     color: black !important;
+    &.scrolled {
+      padding-top: 5rem;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: black;
+      height: 100%;
+      width: 160px;
+      text-align: start;
+      nav {
+        display: block;
+        .left,
+        .right {
+          padding-top: 2rem;
+          display: block;
+          ul {
+            text-align: center;
+            display: block;
+          }
+        }
+      }
+    }
   }
   nav {
     transition: 1s;
@@ -22,26 +68,7 @@ body {
     justify-content: space-between;
     display: flex;
     align-items: center;
-    &.scrolled {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: rgb(0, 151, 156);
-      color: black;
-      width: 100%;
-      .left,
-      .right {
-        color: rgb(0, 0, 0);
-        ul {
-          li {
-            a {
-              color: black;
-              font-weight: 850;
-            }
-          }
-        }
-      }
-    }
+    transition: width 5s;
     .left {
       padding-left: 2rem;
       font-size: 1.5rem;
@@ -79,8 +106,7 @@ body {
       height: 1000px;
       transition: 1s;
       &.scrolled {
-        padding-top: 10rem;
-        transition: 1s;
+        margin-top: 5rem;
       }
       h1 {
         transition: 1s;
