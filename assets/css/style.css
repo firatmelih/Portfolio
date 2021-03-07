@@ -12,6 +12,7 @@ body {
 }
 
 body .side-nav {
+  cursor: pointer;
   height: 53.3333333333px;
   width: 53.3333333333px;
   text-align: center;
@@ -52,6 +53,7 @@ body header.scrolled {
   background-color: black;
   height: 100%;
   width: 160px;
+  overflow-x: hidden;
   text-align: start;
 }
 
@@ -69,6 +71,11 @@ body header.scrolled nav .left ul,
 body header.scrolled nav .right ul {
   text-align: center;
   display: block;
+}
+
+body header.scrolled nav .left ul a,
+body header.scrolled nav .right ul a {
+  transition: 0.3s;
 }
 
 body nav {
@@ -116,17 +123,17 @@ body main {
   background-color: rgba(0, 0, 0, 0.781);
 }
 
-body main #wellcome {
+body main #welcome {
   width: 100%;
   height: 1000px;
   transition: 1s;
 }
 
-body main #wellcome.scrolled {
+body main #welcome.scrolled {
   margin-top: 5rem;
 }
 
-body main #wellcome h1 {
+body main #welcome h1 {
   transition: 1s;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -135,7 +142,7 @@ body main #wellcome h1 {
   font-weight: 75;
 }
 
-body main #wellcome .text {
+body main #welcome .text {
   width: 33%;
   height: 150px;
   display: flex;
@@ -144,29 +151,29 @@ body main #wellcome .text {
   justify-content: center;
 }
 
-body main #wellcome .text p {
+body main #welcome .text p {
   padding: 0.5vw 0.5vw 0.5vw 0;
   font-size: 30px;
 }
 
-body main #wellcome .text p:nth-child(2) {
+body main #welcome .text p:nth-child(2) {
   padding-right: 0;
 }
 
-body main #wellcome .buttons {
+body main #welcome .buttons {
   justify-items: center;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-body main #wellcome .buttons .social {
+body main #welcome .buttons .social {
   padding: 2rem;
   display: flex;
   justify-content: center;
 }
 
-body main #wellcome .buttons .social img {
+body main #welcome .buttons .social img {
   padding: 0.5rem;
   justify-content: center;
   align-items: center;
@@ -175,7 +182,7 @@ body main #wellcome .buttons .social img {
   height: 32px;
 }
 
-body main #wellcome .buttons .scroll {
+body main #welcome .buttons .scroll {
   margin-left: 50%;
   margin-right: 50%;
   background-color: red;
@@ -185,14 +192,14 @@ body main #wellcome .buttons .scroll {
   cursor: pointer;
 }
 
-body main #wellcome .buttons .scroll .mouse {
+body main #welcome .buttons .scroll .mouse {
   margin: 0;
   padding: 0;
   width: 45px;
   height: 45px;
 }
 
-body main #wellcome .buttons .scroll .wheel {
+body main #welcome .buttons .scroll .wheel {
   transition: 1s;
   position: relative;
   top: -10px;
@@ -201,54 +208,97 @@ body main #wellcome .buttons .scroll .wheel {
   height: 10px;
 }
 
-body main #wellcome .buttons .scroll:hover .wheel {
+body main #welcome .buttons .scroll:hover .wheel {
   top: 10px;
 }
 
 body main #about {
-  padding-top: 2rem;
-  width: 100%;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2px;
   height: 100%;
+  width: 100%;
+}
+
+body main #about div {
+  height: 100%;
+  width: 100%;
+  color: white;
   display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  transition: 1s;
 }
 
-body main #about h2 {
-  width: 100%;
-  padding: 5rem;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  font-size: 3vw;
+body main #about div:hover {
+  cursor: pointer;
+  padding-top: 2rem;
 }
 
-body main #about .text-era {
-  display: flex;
-  justify-content: space-between;
+body main #about div:hover:nth-child(1) {
+  background: linear-gradient(to right, rgba(1, 41, 29, 0.808), rgba(3, 25, 44, 0.897)), url(../img/programmer.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-body main #about .text-era .left {
-  padding-left: 5vw;
-  display: flex;
+body main #about div:hover:nth-child(2) {
+  background: linear-gradient(to right, rgba(3, 1, 34, 0.911), rgba(35, 2, 58, 0.87)), url(../img/computer.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-body main #about .text-era .left p {
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  padding: 0.5vw 0.5vw 0.5vw 0;
-  font-size: 35px;
+body main #about div:hover:nth-child(3) {
+  background: linear-gradient(to right, rgba(49, 53, 0, 0.959), rgba(66, 38, 1, 0.87)), url(../img/bench.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-body main #about .text-era .left p:nth-child(2) {
-  padding-right: 0;
+body main #about div:hover:nth-child(4) {
+  background: linear-gradient(to right, rgba(3, 3, 3, 0.75), rgba(0, 0, 0, 0.75)), url(../img/portfolio.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-body main #about .text-era .right {
-  font-size: 20px;
-  padding: 0;
-  margin: 0;
-  padding-right: 5vw;
-  width: 25%;
-  height: 100%;
+body main #about div a {
+  display: none;
+}
+
+body main #about div p {
+  font-size: 75;
+  font-weight: 750;
+  padding-bottom: 2rem;
+}
+
+body main #about div img {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  height: 75px;
+  width: 75px;
+}
+
+body main #about div:nth-child(1) {
+  background: linear-gradient(to right, rgba(0, 255, 179, 0.6), rgba(14, 134, 233, 0.6)), url(../img/programmer.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body main #about div:nth-child(2) {
+  background: linear-gradient(to right, rgba(9, 3, 95, 0.2), rgba(88, 2, 146, 0.6)), url(../img/computer.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body main #about div:nth-child(3) {
+  background: linear-gradient(to right, rgba(238, 255, 0, 0.301), rgba(241, 137, 0, 0.6)), url(../img/bench.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body main #about div:nth-child(4) {
+  background: linear-gradient(to right, rgba(3, 3, 3, 0.6), rgba(0, 0, 0, 0.6)), url(../img/portfolio.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

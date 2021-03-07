@@ -40,7 +40,7 @@ function sleep(ms) {
 }
 // Calling and running functions
 var [i, j, k] = [0, 0, 0];
-let txtArray = ['a Developer', 'Programmer', 'Student', 'Melih']
+let txtArray = ['a Developer', 'a Programmer', 'a Student', 'Melih']
 var txt = txtArray[k];
 var speed = 150;
 var textToType = document.getElementById("typer");
@@ -57,7 +57,7 @@ window.addEventListener('scroll', () => {
     if (window.scrollY > 90 && !navIsClicked) {
         document.querySelector('header').style.display = 'none';
         document.querySelector('.side-nav').style.display = 'flex'
-        document.querySelector('#wellcome').classList.add('scrolled');
+        document.querySelector('#welcome').classList.add('scrolled');
 
     }
     if (navIsClicked && window.scrollY > 90) {
@@ -68,7 +68,7 @@ window.addEventListener('scroll', () => {
         document.querySelector('header').style.display = 'block';
         document.querySelector('.side-nav').style.display = 'none';
         document.querySelector('header').classList.remove('scrolled');
-        document.querySelector('#wellcome').classList.remove('scrolled');
+        document.querySelector('#welcome').classList.remove('scrolled');
     }
 })
 
@@ -79,7 +79,7 @@ document.querySelector('.side-nav').addEventListener('click', () => {
         document.querySelector('.side-nav-img').classList.add('close');
         document.querySelector('.close').classList.remove('side-nav-img');
         document.querySelector('header').style.display = 'block';
-        document.querySelector('#wellcome').classList.add('scrolled');
+        document.querySelector('#welcome').classList.add('scrolled');
         document.querySelector('header').classList.add('scrolled');
     }
     else {
