@@ -129,7 +129,7 @@ body {
         margin-right: 33%;
         margin-left: 33%;
         justify-content: center;
-        p {
+        h2 {
           padding: 0.5vw 0.5vw 0.5vw 0;
           font-size: 30px;
           &:nth-child(2) {
@@ -193,7 +193,7 @@ body {
       grid-gap: 2px;
       height: 100%;
       width: 100%;
-      div {
+      & > * {
         height: 100%;
         width: 100%;
         color: white;
@@ -250,7 +250,7 @@ body {
         a {
           display: none;
         }
-        p {
+        h3 {
           font-size: 75;
           font-weight: 750;
           padding-bottom: 2rem;
