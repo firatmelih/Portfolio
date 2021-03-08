@@ -58,10 +58,11 @@ window.addEventListener('scroll', () => {
         // document.querySelector('header').style.display = 'none';
         document.querySelector('.side-nav').style.display = 'flex'
         document.querySelector('#welcome').classList.add('scrolled');
-
+        document.querySelector('header').classList.add('scrolled');
     }
     if (navIsClicked && window.scrollY > 90) {
         document.querySelector('header').classList.add('scrolled');
+        document.querySelector('#welcome').classList.add('scrolled');
         document.querySelector('.side-nav').style.display = 'flex';
     }
     else if (window.scrollY == 0) {

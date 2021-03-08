@@ -43,7 +43,7 @@ body .side-nav img {
 
 body header {
   color: black !important;
-  transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out !important;
 }
 
 body header.clicked {
@@ -131,15 +131,15 @@ body main {
 body main #welcome {
   width: 100%;
   height: 1000px;
-  transition: 1s;
+  transition: 0.2s;
 }
 
 body main #welcome.scrolled {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 body main #welcome h1 {
-  transition: 1s;
+  transition: 0.2s;
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
