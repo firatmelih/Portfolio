@@ -43,12 +43,17 @@ body .side-nav img {
 
 body header {
   color: black !important;
+  transition: left 0.5s ease-in-out;
+}
+
+body header.clicked {
+  left: 0 !important;
 }
 
 body header.scrolled {
   padding-top: 5rem;
   position: fixed;
-  left: 0;
+  left: -160px;
   top: 0;
   background-color: black;
   height: 100%;
@@ -151,12 +156,12 @@ body main #welcome .text {
   justify-content: center;
 }
 
-body main #welcome .text h2 {
+body main #welcome .text p {
   padding: 0.5vw 0.5vw 0.5vw 0;
   font-size: 30px;
 }
 
-body main #welcome .text h2:nth-child(2) {
+body main #welcome .text p:nth-child(2) {
   padding-right: 0;
 }
 
@@ -266,7 +271,7 @@ body main #about > * a {
   display: none;
 }
 
-body main #about > * h3 {
+body main #about > * p {
   font-size: 75;
   font-weight: 750;
   padding-bottom: 2rem;
