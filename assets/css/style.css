@@ -219,6 +219,7 @@ body main #welcome .buttons .scroll:hover .wheel {
 
 body main #about {
   color: white;
+  cursor: pointer;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2px;
