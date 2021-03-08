@@ -1,10 +1,1 @@
-### Deneme
-
-# Deneme
-
-## Deneme
-
-<hr>
-<br>
-
-# deneme
+### README WILL BE ADDED IN MY FREE TIME SORRY FOR LACK OF INFORMATION.
